@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ImageEditingActivity">
+    
+    <com.image.editor.CustomImageEditingView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/customView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/linEditorTools"
+        />
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/save"
+        android:backgroundTint="@color/primary"
+        android:layout_margin="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.google.android.material.slider.Slider
+        android:id="@+id/sliderOpacity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:value="0"
+        android:visibility="gone"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintBottom_toTopOf="@id/linEditorTools"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <com.google.android.material.slider.Slider
+        android:id="@+id/sliderSkew"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:value="0"
+        android:valueFrom="-1"
+        android:valueTo="1"
+        android:visibility="visible"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintBottom_toTopOf="@id/linEditorTools"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <CheckBox
+        android:id="@+id/cbVertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="@string/vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/cbTopBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="@string/top"
+        app:layout_constraintStart_toStartOf="@id/cbVertical"
+        app:layout_constraintTop_toBottomOf="@id/cbVertical" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/groupSkew"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="sliderSkew,cbTopBottom,cbVertical" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:orientation="horizontal"
+        android:id="@+id/linEditorTools">
+
+        <ImageButton
+            android:id="@+id/btnFlip"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_flip"/>
+
+        <ImageButton
+            android:id="@+id/btnResize"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_resize"/>
+
+        <ImageButton
+            android:id="@+id/btnMove"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_move" />
+
+
+        <ImageButton
+            android:id="@+id/btnCrop"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_crop" />
+
+        <ImageButton
+            android:id="@+id/btnSkew"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_skew" />
+
+        <ImageButton
+            android:id="@+id/btnAlpha"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_opacity" />
+
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
