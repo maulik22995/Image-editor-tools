@@ -12,6 +12,8 @@ CustomImageEditingView is an Android custom view designed to provide image editi
 - Adjust image opacity.
 - Save edited image.
 
+https://github.com/maulik22995/Image-editor-tools/assets/24403085/b7b20604-8247-4032-853b-0bdcd963f8e5
+
 ## Usage
 
 **1. Add CustomImageEditingView to your layout XML:**
@@ -41,9 +43,8 @@ Contributions are welcome! Please follow these steps:
 1. Fork the repository.
 2. Create a new branch (git checkout -b feature/new-feature).
 3. Make your changes and commit them (git commit -am 'Add new feature').
-4 push to the branch (git push origin feature/new-feature).
-5 Create a pull request.
+4. push to the branch (git push origin feature/new-feature).
+5. Create a pull request.
 
 
-https://github.com/maulik22995/Image-editor-tools/assets/24403085/b7b20604-8247-4032-853b-0bdcd963f8e5
 
